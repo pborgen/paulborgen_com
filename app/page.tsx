@@ -216,6 +216,26 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
+                <CardTitle>AI & Development Tools</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  <Badge>Claude Code</Badge>
+                  <Badge>Claude API</Badge>
+                  <Badge>OpenAI API</Badge>
+                  <Badge>LLM Integration</Badge>
+                  <Badge>AI-Assisted Development</Badge>
+                  <Badge>Prompt Engineering</Badge>
+                </div>
+                <p className="text-muted-foreground">
+                  Leveraging AI tools like Claude Code for accelerated
+                  development, code review, and building AI-powered
+                  applications.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
                 <CardTitle>Languages</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -439,9 +459,17 @@ export default function Portfolio() {
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
               {
+                role: "AI Principal Software Engineer",
+                company: "Alopex Health",
+                period: "2025 - Present",
+                languages: "AI, LLM, GoLang, Typescript",
+                description:
+                  "Leveraging AI and LLMs to build the next generation of medical systems.",
+              },
+              {
                 role: "CTO / Lead Software Engineer",
                 company: "Mintra Marketplace",
-                period: "2021 - Present",
+                period: "2021 - 2025",
                 languages: "Solidity, Go, Typescript",
                 description:
                   "Built a NFT marketplace with a great team from the ground up.",
