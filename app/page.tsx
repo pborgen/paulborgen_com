@@ -154,7 +154,7 @@ export default function Portfolio() {
           className="py-6 md:py-8 lg:py-10 flex flex-col md:flex-row items-center gap-8 md:gap-16"
         >
           <div className="flex-1 space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
               I'm Paul Borgen
               <span className="block text-primary">Software Engineer</span>
             </h1>
@@ -540,7 +540,7 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="flex justify-center max-w-4xl mx-auto">
             <Card>
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
@@ -590,10 +590,19 @@ export default function Portfolio() {
 
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left space-y-2">
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Paul Borgen. All rights reserved.
             </p>
+            <div className="flex items-center justify-center md:justify-start gap-2">
+              <Image
+                src="/claude-logo.svg"
+                alt="Claude"
+                width={16}
+                height={16}
+              />
+              <span className="text-xs text-muted-foreground">Built with Claude Code</span>
+            </div>
           </div>
           <div className="flex gap-4">
             <Button
