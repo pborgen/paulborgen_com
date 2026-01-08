@@ -1,0 +1,6 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rocket Body -->
+  <path d="M8 2 L12 6 L10 10 L6 10 L4 6 Z" fill="#FF6F61" stroke="#333" stroke-width="1"/>
+  <!-- Flame -->
+  <path d="M6 10 Q8 14 10 10" fill="#FFD700" stroke="#333" stroke-width="0.5"/>
+</svg>
