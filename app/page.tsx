@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import TelegramIcon from "../public/telegram.svg";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { TerminalAnimation } from "@/components/terminal-animation";
 
 export default function Portfolio() {
   // GitHub repositories data
@@ -201,6 +202,17 @@ export default function Portfolio() {
               />
             </div>
           </div>
+        </section>
+
+        {/* Claude Code Demo Section */}
+        <section className="py-12 md:py-24 border-t">
+          <div className="space-y-4 text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">AI-Powered Development</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Building faster with Claude Code - my go-to AI coding assistant.
+            </p>
+          </div>
+          <TerminalAnimation />
         </section>
 
         {/* Skills Section */}
