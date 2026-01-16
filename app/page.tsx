@@ -72,7 +72,7 @@ export default function Portfolio() {
               About
             </Link>
             <Link
-              href="/PaulBorgenResume_2025.pdf"
+              href="/PaulBorgenResume.pdf"
               target="_blank"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
@@ -182,7 +182,7 @@ export default function Portfolio() {
               </Button>
               <Button variant="outline" asChild>
                 <Link
-                  href="/PaulBorgenResume_2025.pdf"
+                  href="/PaulBorgenResume.pdf"
                   target="_blank"
                   className="text-sm font-medium hover:text-primary transition-colors"
                 >
@@ -532,7 +532,7 @@ export default function Portfolio() {
           <div className="flex justify-center mt-12">
             <Button variant="outline" asChild>
               <Link
-                href="/PaulBorgenResume_2025.pdf"
+                href="/PaulBorgenResume.pdf"
                 target="_blank"
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
