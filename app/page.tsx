@@ -91,6 +91,12 @@ export default function Portfolio() {
               Projects
             </Link>
             <Link
+              href="#architecture"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Architecture
+            </Link>
+            <Link
               href="#github"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
@@ -161,17 +167,18 @@ export default function Portfolio() {
             </h1>
             <p className="text-xl text-muted-foreground">
               Results-driven experienced CTO and lead software engineer with a
-              strong background at all layers of the software stack.
+              strong background at all layers of the software stack and in
+              Architecture & Systems Design.
             </p>
             <p className="text-xl text-muted-foreground">
               Proven ability to lead technical teams in developing innovative
               solutions, with a focus on driving strategy and operational
-              efficiency. Skilled in software design, testing, and project
-              execution, ensuring timely delivery of high-quality solutions.
-              Adept at working with diverse teams, building strong relationships
-              with stakeholders, and delivering customer-focused outcomes.
-              Seeking a leadership role that combines technical expertise with
-              hands-on involvement.
+              efficiency. Skilled in software design, testing, system
+              architecture, and project execution, ensuring timely delivery of
+              high-quality solutions. Adept at working with diverse teams,
+              building strong relationships with stakeholders, and delivering
+              customer-focused outcomes. Seeking a leadership role that combines
+              technical expertise with hands-on involvement.
             </p>
             <div className="flex gap-4 pt-4">
               <Button asChild>
@@ -213,6 +220,70 @@ export default function Portfolio() {
             </p>
           </div>
           <TerminalAnimation />
+        </section>
+
+        {/* Architecture Section */}
+        <section id="architecture" className="py-12 md:py-24 border-t">
+          <div className="space-y-4 text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Architecture & Systems Design</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              I design systems that scale, stay observable, and ship fast—using AI to accelerate
+              analysis, implementation, and iteration without sacrificing reliability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>AI-First Systems</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Built AI-driven platforms with LLM integration, prompt pipelines, and automated
+                  evaluation to deliver measurable improvements in productivity and quality.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge>LLM Orchestration</Badge>
+                  <Badge>Prompt Pipelines</Badge>
+                  <Badge>AI Tooling</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Scalable Platforms</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Architected distributed services, data pipelines, and storage layers designed for
+                  high throughput and low latency with clear operational ownership.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge>Distributed Systems</Badge>
+                  <Badge>Data Pipelines</Badge>
+                  <Badge>Observability</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Execution & Delivery</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Led architecture decisions end‑to‑end—from discovery to production—balancing
+                  security, performance, and cost while shipping iteratively.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge>System Design</Badge>
+                  <Badge>Security</Badge>
+                  <Badge>Cost Optimization</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         {/* Skills Section */}
