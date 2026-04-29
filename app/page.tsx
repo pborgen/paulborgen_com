@@ -162,7 +162,7 @@ export default function Portfolio() {
         >
           <div className="flex-1 space-y-4">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-              I'm Paul Borgen
+              I'm Paul Borgen TESTING
               <span className="block text-primary">Software Engineer</span>
             </h1>
             <p className="text-xl text-muted-foreground">
