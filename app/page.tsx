@@ -684,7 +684,7 @@ export default function Portfolio() {
                 width={16}
                 height={16}
               />
-              <span className="text-xs text-muted-foreground">Built with Claude Code</span>
+              <span className="text-xs text-muted-foreground">Built with Cursor Pro</span>
             </div>
           </div>
           <div className="flex gap-4">
