@@ -109,6 +109,12 @@ export default function Portfolio() {
               Experience
             </Link>
             <Link
+              href="#education"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Education
+            </Link>
+            <Link
               href="#contact"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
@@ -304,16 +310,20 @@ export default function Portfolio() {
               <CardContent className="space-y-4">
                 <div className="flex flex-wrap gap-2">
                   <Badge>Claude Code</Badge>
+                  <Badge>Codex</Badge>
                   <Badge>Claude API</Badge>
                   <Badge>OpenAI API</Badge>
-                  <Badge>LLM Integration</Badge>
-                  <Badge>AI-Assisted Development</Badge>
+                  <Badge>LLMs</Badge>
+                  <Badge>LangChain</Badge>
+                  <Badge>Speckit</Badge>
+                  <Badge>DAGs</Badge>
+                  <Badge>Vector Databases</Badge>
                   <Badge>Prompt Engineering</Badge>
                 </div>
                 <p className="text-muted-foreground">
-                  Leveraging AI tools like Claude Code for accelerated
-                  development, code review, and building AI-powered
-                  applications.
+                  Leveraging AI tools like Claude Code and Codex for accelerated
+                  development, code review, and building AI-powered applications
+                  with LLMs, vector databases, and DAG-based pipelines.
                 </p>
               </CardContent>
             </Card>
@@ -374,6 +384,7 @@ export default function Portfolio() {
                   <Badge>Jenkins</Badge>
                   <Badge>Docker</Badge>
                   <Badge>AWS</Badge>
+                  <Badge>Terraform</Badge>
                   <Badge>Vercel</Badge>
                   <Badge>CI/CD</Badge>
                 </div>
@@ -390,13 +401,15 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2">
                   <Badge>NextJS</Badge>
                   <Badge>NestJs</Badge>
+                  <Badge>React</Badge>
+                  <Badge>TanStack</Badge>
+                  <Badge>Vite</Badge>
                   <Badge>Spring</Badge>
                   <Badge>Hibernate</Badge>
                   <Badge>ESAPI</Badge>
                   <Badge>Maven</Badge>
                   <Badge>Gradle</Badge>
                   <Badge>Express</Badge>
-                  <Badge>React</Badge>
                 </div>
                 <p className="text-muted-foreground">
                   Some of the frameworks I use and have used.
@@ -542,43 +555,60 @@ export default function Portfolio() {
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
               {
-                role: "AI Principal Software Engineer",
-                company: "Alopex Health",
+                role: "Principal AI Engineer",
+                company: "Alopex",
                 period: "2025 - Present",
-                languages: "AI, LLM, GoLang, Typescript",
+                languages: "AI, LLMs, GoLang, Typescript",
                 description:
-                  "Leveraging AI and LLMs to build the next generation of medical systems.",
+                  "Leading technical architecture for next-generation healthcare platforms. Architected HIPAA-compliant, multi-tenant patient management systems on AWS using GoLang, TypeScript, TanStack, and Vite. Designed and built an AI-powered clinical chat interface leveraging LLMs, vector databases, and DAGs to give nurses real-time, context-rich patient summaries.",
               },
               {
-                role: "CTO / Lead Software Engineer",
-                company: "Mintra Marketplace",
+                role: "Co-Founder / CTO",
+                company: "Mintra",
                 period: "2021 - 2025",
                 languages: "Solidity, Go, Typescript",
                 description:
-                  "Built a NFT marketplace with a great team from the ground up.",
+                  "Led a global distributed team to build the leading NFT marketplace on Pulsechain end-to-end. Built an LLM-powered NFT recommendation engine analyzing user behavior, traits, and on-chain activity. Architected a data pipeline that processed millions of NFTs across tens of thousands of collections, with a distributed locking workflow for deterministic blockchain processing. All smart contracts fully audited via Foundry and Hardhat with comprehensive unit tests.",
               },
               {
-                role: "Lead Software Engineer",
+                role: "Software Engineering Consultant",
                 company: "Precision Point Systems",
                 period: "2020 - 2021",
-                languages: "Go, Python, C++, C#, Javascript",
+                languages: "Go, C, C++, Python",
                 description:
-                  "Development a system to track a football in real time during games. This was done using a combination of computer vision and machine learning.",
+                  "Built and stabilized a computer vision system for real-time football tracking, using C/C++/GoLang to manage high-resolution cameras and a custom-trained AI model with OpenCV. Deployed for UCONN football games at Rentschler Field with measurement accuracy down to roughly half an inch.",
               },
               {
-                role: "Advanced Software Engineer",
+                role: "Advanced Software Engineer (Solutions / DevOps / Analytics)",
                 company: "Honeywell",
                 period: "2016 - 2020",
                 languages: "Java, Javascript, Python",
                 description:
-                  "Big Data analysis / DevOps / Full Stack Development",
+                  "Big Data analysis / DevOps / Full Stack Development. Modernized backend applications onto Spring and Hibernate, hardened security via ESAPI, migrated SVN to Git, and built a Jenkins CI pipeline for end-to-end automation.",
               },
               {
                 role: "Senior Software Engineer",
                 company: "Honeywell",
                 period: "2012 - 2016",
                 languages: "Java, Javascript, Python",
-                description: "Full Stack Development / Security / DevOps ",
+                description:
+                  "Full Stack Development / Security / DevOps. Led offshore Scrum teams, introduced unit testing methodology, and drove performance and security improvements across the metering business suite.",
+              },
+              {
+                role: "Web Application Developer",
+                company: "CARQUEST Technologies, LLC",
+                period: "2010 - 2012",
+                languages: "Java, PL/SQL, VB6",
+                description:
+                  "Modernized auto parts inventory and management by analyzing legacy VB6 applications and migrating data flows into a J2EE application built with Java and PL/SQL.",
+              },
+              {
+                role: "QA Team Lead",
+                company: "Pratt & Whitney",
+                period: "2008 - 2010",
+                languages: "Java, VBScript, Selenium",
+                description:
+                  "Led automation of testing for FADEC applications processing real-time jet engine data. Translated engineering requirements into test plans and built automation suites in QTP/VBScript and Selenium across four J2EE applications.",
               },
             ].map((job, index) => (
               <Card key={index}>
@@ -610,6 +640,50 @@ export default function Portfolio() {
                 Download Resume
               </Link>
             </Button>
+          </div>
+        </section>
+
+        {/* Education & Certificates Section */}
+        <section id="education" className="py-12 md:py-24 border-t">
+          <div className="space-y-4 text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Education & Certifications
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Academic background and professional certifications.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Card>
+              <CardHeader>
+                <CardTitle>Education</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-2">
+                <p className="font-semibold">
+                  Bachelor of Science, Computer Science
+                </p>
+                <p className="text-muted-foreground">
+                  Central Connecticut State University
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Certifications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>AWS Certified Cloud Practitioner</li>
+                  <li>AWS Certified Solutions Architect – Associate</li>
+                  <li>
+                    Certified Ethical Hacker (CEH){" "}
+                    <span className="text-sm">— EC-Council</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -655,16 +729,7 @@ export default function Portfolio() {
                     https://github.com/pborgen
                   </Link>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Github className="h-5 w-5 text-primary" />
-                  <Link
-                    href="https://github.com/hexlivelive"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://github.com/hexlivelive
-                  </Link>
-                </div>
+                
               </CardContent>
             </Card>
           </div>
