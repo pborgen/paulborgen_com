@@ -217,17 +217,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Claude Code Demo Section */}
-        <section className="py-12 md:py-24 border-t">
-          <div className="space-y-4 text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">AI-Powered Development</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Building faster with Claude Code - my go-to AI coding assistant.
-            </p>
-          </div>
-          <TerminalAnimation />
-        </section>
-
         {/* Architecture Section */}
         <section id="architecture" className="py-12 md:py-24 border-t">
           <div className="space-y-4 text-center mb-12">
