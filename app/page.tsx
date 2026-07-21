@@ -5,7 +5,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -14,46 +13,11 @@ import {
   Github,
   Linkedin,
   Mail,
-  Twitter,
-  Code,
 } from "lucide-react";
-import TelegramIcon from "../public/telegram.svg";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { TerminalAnimation } from "@/components/terminal-animation";
 
 export default function Portfolio() {
-  // GitHub repositories data
-  const githubRepos = [
-    {
-      name: "AI Image generation",
-      description:
-        "This is part of a larger project that I was working on. It is a toolkit for creating and managing AI images. This code here is the code for the image generation. I used a open source project call ai-toolkit to build upon.",
-      url: "https://github.com/hexlivelive/ai-toolkit",
-      language: "Python",
-    },
-    {
-      name: "NFT Marketplace Smart Contracts",
-      description:
-        "In this project I created the smart contracts for a NFT marketplace using thirdweb. The thirdweb smart contract had to be heavily modified to fit the needs of the marketplace. Foundry was used to aid in this development. I also have 100% test coverage for the contracts that I wrote. Main work was done here https://github.com/mintra-marketplace/thirdweb_contracts/blob/main/contracts/prebuilts/marketplace/direct-listings/MintraDirectListings.sol",
-      url: "https://github.com/mintra-marketplace",
-      language: "Solidity",
-    },
-    {
-      name: "Go Pulse MEV",
-      description:
-        "This is a augmented ethereum geth client that lets you order the transaction with you client wins a block. This is not complete but I was able to create a way to order transactions as you like. I also added a feature that allows you to prioritize transactions based on your needs.",
-      url: "https://github.com/pborgen/go-pulse-mev",
-      language: "Go",
-    },
-    {
-      name: "Python Ethereum Data Analysis with Dask and Pandas",
-      description:
-        "Project to analyze ethereum data using python, pandas and dask.",
-      url: "https://github.com/pborgen/ethdataanalyze",
-      language: "Python",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -90,12 +54,6 @@ export default function Portfolio() {
               Architecture
             </Link>
             <Link
-              href="#github"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              GitHub
-            </Link>
-            <Link
               href="#experience"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
@@ -119,16 +77,6 @@ export default function Portfolio() {
             <Button variant="outline" size="icon" asChild>
               <Link
                 href="https://github.com/pborgen"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <Link
-                href="https://github.com/hexlivelive"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -184,7 +132,7 @@ export default function Portfolio() {
                 <Link href="#contact">Get in Touch</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="#github">View My Work</Link>
+                <Link href="#experience">View My Work</Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link
@@ -438,60 +386,6 @@ export default function Portfolio() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* GitHub Repositories Section */}
-        <section id="github" className="py-12 md:py-24 border-t">
-          <div className="space-y-4 text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              GitHub Repositories
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Open source projects and contributions I've made to the developer
-              community.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {githubRepos.map((repo, index) => (
-              <Card key={index} className="hover:shadow-md transition-shadow">
-                <CardHeader className="pb-2">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="flex items-center gap-2">
-                        <Github className="h-5 w-5 text-primary" />
-                        <Link
-                          href={repo.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors"
-                        >
-                          {repo.name}
-                        </Link>
-                      </CardTitle>
-                      <CardDescription className="mt-1">
-                        {repo.description}
-                      </CardDescription>
-                    </div>
-                    <Badge variant="outline">{repo.language}</Badge>
-                  </div>
-                </CardHeader>
-                <CardFooter className="pt-2 flex justify-between text-sm text-muted-foreground">
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link
-                      href={repo.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1"
-                    >
-                      <Code className="h-4 w-4" />
-                      View Code
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
           </div>
         </section>
 
@@ -764,21 +658,6 @@ export default function Portfolio() {
             >
               <Link
                 href="https://github.com/pborgen"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              asChild
-              className="text-gray-500 hover:text-blue-500"
-            >
-              <Link
-                href="https://github.com/hexlivelive"
                 target="_blank"
                 rel="noopener noreferrer"
               >
