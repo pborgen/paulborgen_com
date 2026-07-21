@@ -15,7 +15,6 @@ import {
   Linkedin,
   Mail,
   Twitter,
-  ExternalLink,
   Code,
 } from "lucide-react";
 import TelegramIcon from "../public/telegram.svg";
@@ -83,12 +82,6 @@ export default function Portfolio() {
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Skills
-            </Link>
-            <Link
-              href="#projects"
-              className="text-sm font-medium hover:text-primary transition-colors"
-            >
-              Projects
             </Link>
             <Link
               href="#architecture"
@@ -191,7 +184,7 @@ export default function Portfolio() {
                 <Link href="#contact">Get in Touch</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="#projects">View My Work</Link>
+                <Link href="#github">View My Work</Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link
@@ -207,7 +200,7 @@ export default function Portfolio() {
           <div className="flex-1 flex justify-center md:justify-end p-8">
             <div className="relative w-80 h-80 md:w-96 md:h-96 overflow-hidden">
               <Image
-                src="/personal/Headshot-min-min-2.png"
+                src="/personal/enhanced_head_shot.jpg"
                 alt="Paul Borgen"
                 fill
                 className="object-contain"
@@ -300,10 +293,13 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2">
                   <Badge>Claude Code</Badge>
                   <Badge>Codex</Badge>
+                  <Badge>Grok</Badge>
                   <Badge>Claude API</Badge>
                   <Badge>OpenAI API</Badge>
                   <Badge>LLMs</Badge>
                   <Badge>LangChain</Badge>
+                  <Badge>LangGraph</Badge>
+                  <Badge>Amazon Bedrock</Badge>
                   <Badge>Speckit</Badge>
                   <Badge>DAGs</Badge>
                   <Badge>Vector Databases</Badge>
@@ -352,6 +348,10 @@ export default function Portfolio() {
                   <Badge>DragonFly</Badge>
                   <Badge>Dask</Badge>
                   <Badge>Parquet</Badge>
+                  <Badge>OpenSearch</Badge>
+                  <Badge>pgvector</Badge>
+                  <Badge>Pinecone</Badge>
+                  <Badge>Chroma</Badge>
                 </div>
                 <p className="text-muted-foreground">
                   May different ways to store your data. I have experience with
@@ -372,13 +372,27 @@ export default function Portfolio() {
                   <Badge>GitLab Pipelines</Badge>
                   <Badge>Jenkins</Badge>
                   <Badge>Docker</Badge>
-                  <Badge>AWS</Badge>
                   <Badge>Terraform</Badge>
                   <Badge>Vercel</Badge>
                   <Badge>CI/CD</Badge>
                 </div>
                 <p className="text-muted-foreground">
                   Some of the DevOps type tools I have been exposed to.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Cloud</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  <Badge>AWS</Badge>
+                  <Badge>Azure</Badge>
+                </div>
+                <p className="text-muted-foreground">
+                  Designing and operating cloud infrastructure across AWS and
+                  Azure for scalable, secure applications.
                 </p>
               </CardContent>
             </Card>
@@ -424,57 +438,6 @@ export default function Portfolio() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* Projects Section */}
-        <section id="projects" className="py-12 md:py-24 border-t">
-          <div className="space-y-4 text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Featured Projects
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A selection of my recent work and personal projects.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card key="mintra" className="overflow-hidden flex flex-col">
-              <div className="relative h-48 w-full">
-                <Image
-                  src={`/mintra.png?height=192&width=384`}
-                  alt={`Mintra`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>Mintra Marketplace</CardTitle>
-                <CardDescription>
-                  "NFT Marketplace build from the ground up. No fork required."
-                </CardDescription>
-              </CardHeader>
-
-              <CardFooter className="flex justify-between">
-                <Button size="sm" asChild>
-                  <Link
-                    href="https://app.mintra.ai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Live Demo
-                  </Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <Button variant="outline" asChild>
-              <Link href="#">View All Projects</Link>
-            </Button>
           </div>
         </section>
 
@@ -546,58 +509,105 @@ export default function Portfolio() {
               {
                 role: "Principal AI Engineer",
                 company: "Alopex",
-                period: "2025 - Present",
-                languages: "AI, LLMs, GoLang, Typescript",
-                description:
-                  "Leading technical architecture for next-generation healthcare platforms. Architected HIPAA-compliant, multi-tenant patient management systems on AWS using GoLang, TypeScript, TanStack, and Vite. Designed and built an AI-powered clinical chat interface leveraging LLMs, vector databases, and DAGs to give nurses real-time, context-rich patient summaries.",
+                period: "05/2024 - Current",
+                description: [
+                  "Architected scalable, HIPAA-compliant, multi-tenant patient management systems on AWS using Python, Golang, to power secure care coordination across medical organizations.",
+                  "Designed and built an AI-powered clinical chat interface leveraging AWS, LLMs, vector databases, and Directed Acyclic Graphs (DAGs) to provide nurses with real-time, context-rich patient summaries, dramatically improving situational awareness and decision-making speed.",
+                  "Architected a scalable AI platform on AWS using LangChain, Amazon Bedrock, and LangGraph agents running on AWS Fargate (ECS). Integrated OpenSearch Serverless for embeddings, S3 for document processing, Redis caching, and Step Functions for orchestration, enabling resilient and complex AI workflows.",
+                  "Designed secure authentication, role-based access control (RBAC), and intelligent workflows for referrals, eligibility verification, and care team coordination while maintaining strict data privacy standards.",
+                ],
               },
               {
                 role: "Co-Founder / CTO",
                 company: "Mintra",
-                period: "2021 - 2025",
-                languages: "Solidity, Go, Typescript",
-                description:
-                  "Led a global distributed team to build the leading NFT marketplace on Pulsechain end-to-end. Built an LLM-powered NFT recommendation engine analyzing user behavior, traits, and on-chain activity. Architected a data pipeline that processed millions of NFTs across tens of thousands of collections, with a distributed locking workflow for deterministic blockchain processing. All smart contracts fully audited via Foundry and Hardhat with comprehensive unit tests.",
+                period: "07/2021 - 05/2024",
+                description: [
+                  "Leading a global distributed team to build all aspects of the NFT marketplace.",
+                  "Built an LLM-powered NFT recommendation engine that analyzed user behavior, collection traits, and on-chain activity to deliver personalized NFT suggestions, significantly improving user engagement and discovery on the platform.",
+                  "Used RunPod Hosted machines to run Ollama based Models for the recommendation system.",
+                  "Leveraged modern AI development tools (including Cursor / Claude) to accelerate software development velocity, enabling faster iteration, code generation, and higher-quality output across the engineering team.",
+                  "Ensured all smart contracts underwent a full audit and have proven secure to date, using Foundry and Hardhat with a comprehensive suite of unit tests.",
+                  "Architected a data pipeline that has processed millions of NFTs and tens of thousands of collections.",
+                  "Developed a distributed locking workflow capable of processing blockchain data in a distributed, deterministic manner.",
+                  "Mintra exemplifies innovation and technical expertise, emerging as the leading NFT marketplace on Pulsechain.com.",
+                ],
               },
               {
                 role: "Software Engineering Consultant",
                 company: "Precision Point Systems",
-                period: "2020 - 2021",
-                languages: "Go, C, C++, Python",
-                description:
-                  "Built and stabilized a computer vision system for real-time football tracking, using C/C++/GoLang to manage high-resolution cameras and a custom-trained AI model with OpenCV. Deployed for UCONN football games at Rentschler Field with measurement accuracy down to roughly half an inch.",
+                period: "02/2020 - 07/2021",
+                description: [
+                  "Engaged to evaluate and refine a sophisticated computer vision system designed for precise tracking of a football on the field.",
+                  "This project leveraged advanced C / C++ / GoLang programming to manage an array of high-resolution cameras monitoring the game in real-time.",
+                  "Our task involved capturing images from these cameras and employing a custom AI model that I trained to determine the exact position of the football with pinpoint accuracy.",
+                  "OpenCV was integral throughout this process.",
+                  "This initiative not only showcased cutting-edge technology in sports analytics but also expanded the capabilities of computer vision applications in dynamic environments.",
+                  "Stabilized the system for reliable use during live games.",
+                  "Successfully deployed the system for UCONN football games at Rentschler Field.",
+                  "Achieved measurement accuracy down to the pixel level from the camera, equivalent to approximately half an inch.",
+                ],
               },
               {
-                role: "Advanced Software Engineer (Solutions / DevOps / Analytics)",
+                role: "Staff Software Engineer (Solutions / DevOps / Analytics)",
                 company: "Honeywell",
-                period: "2016 - 2020",
-                languages: "Java, Javascript, Python",
-                description:
-                  "Big Data analysis / DevOps / Full Stack Development. Modernized backend applications onto Spring and Hibernate, hardened security via ESAPI, migrated SVN to Git, and built a Jenkins CI pipeline for end-to-end automation.",
+                period: "06/2016 - 02/2020",
+                description: [
+                  "Developed and maintained multiple external interfaces within metering infrastructures.",
+                  "Executed key operations including database design, performance optimization, and backend development.",
+                  "Strengthened security by enhancing the enterprise security API (ESAPI) and reducing vulnerabilities to XSS and XSRF attacks.",
+                  "Drove performance improvements through efficient SQL queries and advanced threading strategies.",
+                  "Updated several backend applications to utilize Spring and Hibernate, resulting in a simplified architecture and faster turnaround times in subsequent sprints.",
+                  "Customized and applied ESAPI implementations to enhance security across all business suite applications.",
+                  "Led security reviews by analyzing penetration testing reports and implementing required fixes.",
+                  "Introduced unit testing methodologies and strategies to improve code quality within the team.",
+                  "Migrated the codebase from SVN to GIT to streamline version control workflows.",
+                  "Created a CI pipeline using Jenkins, enabling end-to-end automation in the continuous integration process.",
+                  "Led distributed teams and innovated SDLC and communication methods to enhance collaboration and delivery.",
+                ],
               },
               {
                 role: "Senior Software Engineer",
                 company: "Honeywell",
-                period: "2012 - 2016",
-                languages: "Java, Javascript, Python",
-                description:
-                  "Full Stack Development / Security / DevOps. Led offshore Scrum teams, introduced unit testing methodology, and drove performance and security improvements across the metering business suite.",
+                period: "07/2012 - 06/2016",
+                description: [
+                  "Developed and maintained multiple external interfaces within metering infrastructures.",
+                  "Executed key operations including database design, performance optimization, and backend development.",
+                  "Enhanced security by advancing the enterprise security API (ESAPI) and reducing vulnerabilities to XSS and XSRF attacks.",
+                  "Drove performance improvements through efficient SQL queries and threading strategies.",
+                  "Noted Accomplishments: Updated several backend applications to leverage Spring and Hibernate, resulting in simpler architecture and faster sprint turnaround times.",
+                  "Customized and utilized ESAPI implementation to strengthen security across all applications in the business suite.",
+                  "Introduced and established unit testing methodologies and strategies within the team.",
+                  "Migrated the codebase from SVN to GIT.",
+                  "Created a CI pipeline with Jenkins and enabled end-to-end automation in the CI process.",
+                  "Led offshore teams over multiple years within a Scrum SDLC environment.",
+                ],
               },
               {
                 role: "Web Application Developer",
                 company: "CARQUEST Technologies, LLC",
-                period: "2010 - 2012",
-                languages: "Java, PL/SQL, VB6",
-                description:
-                  "Modernized auto parts inventory and management by analyzing legacy VB6 applications and migrating data flows into a J2EE application built with Java and PL/SQL.",
+                period: "06/2010 - 07/2012",
+                description: [
+                  "Worked on innovating the auto parts inventory and management system by analyzing existing VB6 applications to understand data flow.",
+                  "Migrated and integrated this data into a J2EE application I developed, utilizing a combination of Java and PLSQL to enhance data processing speed.",
+                ],
               },
               {
-                role: "QA Team Lead",
+                role: "QA Team Leader",
                 company: "Pratt & Whitney",
-                period: "2008 - 2010",
-                languages: "Java, VBScript, Selenium",
-                description:
-                  "Led automation of testing for FADEC applications processing real-time jet engine data. Translated engineering requirements into test plans and built automation suites in QTP/VBScript and Selenium across four J2EE applications.",
+                period: "08/2008 - 06/2010",
+                description: [
+                  "Spearheaded the automation of testing processes for applications processing real-time jet engine data via FADEC (Full Authority Digital Engine Control).",
+                  "Collaborated closely with aerospace engineers to gather and refine testing requirements, ensuring alignment with engineering objectives and operational constraints.",
+                  "Translated engineering requirements into detailed test plans, leading the team through manual testing to validate application performance.",
+                  "Designed and implemented comprehensive automation suites by converting manual test plans into automated tests, significantly enhancing efficiency and reducing error rates.",
+                  "Managed team workflows, delegated tasks effectively, and facilitated seamless collaboration between testers and engineers to deliver robust, reliable testing solutions.",
+                  "Maintained a testing suite in Mercury Quality Center.",
+                  "Validated 4 J2EE applications.",
+                  "Developed detailed Test Plans.",
+                  "Created a Java program to verify database population accuracy.",
+                  "Collaborated with top Aerospace and Mechanical engineers to define testing requirements.",
+                  "Built testing suites using VBScript (QTP) and later Selenium for automated functional testing.",
+                ],
               },
             ].map((job, index) => (
               <Card key={index}>
@@ -613,7 +623,11 @@ export default function Portfolio() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{job.description}</p>
+                  <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
+                    {job.description.map((bullet, bulletIndex) => (
+                      <li key={bulletIndex}>{bullet}</li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
